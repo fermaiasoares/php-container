@@ -1,23 +1,32 @@
 version: "3.8"
 
-services: 
-  php:
+services:
+  app:
     build: .
-    ports: 
+    container_name: container-app
+    ports:
       - "80:80"
       - "443:443"
-    volumes: 
+    volumes:
       - ./www:/var/www/html
-    links: 
+    links:
       - db
-  db: 
+    networks:
+      - apphost
+  db:
     image: mysql:5.7
-    volumes: 
+    container_name: container-db
+    volumes:
       - /var/lib/mysql
-    environment: 
-      MYSQL_ROOT_PASSWORD: mysql
-      MYSQL_USER: root
-      MYSQL_DATABASE: containerdb
-    ports: 
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE},
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_USER: ${DB_USERNAME}
+    ports:
       - "3306:3306"
-    
+    networks:
+      - apphost
+networks:
+  apphost:
+    driver: bridge

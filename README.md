@@ -1,4 +1,4 @@
-## PHP Container + MYSQL
+## PHP Container + MYSQL + Composer
 
 Quem é da área de TI sabe como o setor é dinâmico e se renova a cada dia. A transformação digital e a adoção massiva da tecnologia nas empresas, de todos os segmentos e portes, aumentou muito a demanda por soluções tecnológicas, tanto em suporte, como em desenvolvimento de sistemas personalizados.
 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpunit
+    backupGlobal="false"
+    backupStaticAttributes="false"
+    bootstrap="./bootstrap.php"
+    cacheTokens="true"
+    colors="true"
+    convertErrorsToExceptions="true" convertNoticesToExceptions="true" convertWarningsToExceptions="true"
+    processIsolation="false"
+    stopOnFailure="false"
+    verbose="false">
+    <testsuites>
+        <testsuite name="Geted Started Tests">
+            <directory>./tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
